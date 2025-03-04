@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'EcommerceApp',
+      title: 'InvoiceApp',
       theme: themeData,
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),

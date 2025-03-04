@@ -4,9 +4,15 @@ import 'package:invoice/CustomWidgets/custom_buttons.dart';
 import 'package:invoice/CustomWidgets/custom_radio_button.dart';
 import 'package:invoice/CustomWidgets/customtext.dart';
 
-class UploadResumeScreen extends StatelessWidget {
+class UploadResumeScreen extends StatefulWidget {
   const UploadResumeScreen({super.key});
 
+  @override
+  State<UploadResumeScreen> createState() => _UploadResumeScreenState();
+}
+
+class _UploadResumeScreenState extends State<UploadResumeScreen> {
+  int? _selectedQuality; // Variable to track selected value
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,22 +41,47 @@ class UploadResumeScreen extends StatelessWidget {
          children: [
            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
              Poppins(text: 'Quality 60%',fontWeight: FontWeight.w500,fontSize: 16,color: Get.theme.secondaryHeaderColor,),
-             CustomRadioButton()
+             CustomRadioButton(
+               value: 0,
+               groupValue: _selectedQuality,
+               onChanged: (int? newValue) {
+                 setState(() {
+                   _selectedQuality = newValue;
+                 });
+               },)
            ],),
            Divider(height: 20,thickness: 1,color: Get.theme.secondaryHeaderColor.withOpacity(0.2),),
            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
              Poppins(text: 'Quality 80%',fontWeight: FontWeight.w500,fontSize: 16,color: Get.theme.secondaryHeaderColor,),
-             CustomRadioButton()
+             CustomRadioButton(  value: 1,
+               groupValue: _selectedQuality,
+               onChanged: (int? newValue) {
+                 setState(() {
+                   _selectedQuality = newValue;
+                 });
+               },)
            ],),
            Divider(height: 20,thickness: 1,color: Get.theme.secondaryHeaderColor.withOpacity(0.2),),
            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
              Poppins(text: 'Quality 100%',fontWeight: FontWeight.w500,fontSize: 16,color: Get.theme.secondaryHeaderColor,),
-             CustomRadioButton()
+             CustomRadioButton(  value: 2,
+               groupValue: _selectedQuality,
+               onChanged: (int? newValue) {
+                 setState(() {
+                   _selectedQuality = newValue;
+                 });
+               },)
            ],),
            Divider(height: 20,thickness: 1,color: Get.theme.secondaryHeaderColor.withOpacity(0.2),),
            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
              Poppins(text: 'None',fontWeight: FontWeight.w500,fontSize: 16,color: Get.theme.secondaryHeaderColor,),
-             CustomRadioButton()
+             CustomRadioButton(  value: 3,
+               groupValue: _selectedQuality,
+               onChanged: (int? newValue) {
+                 setState(() {
+                   _selectedQuality = newValue;
+                 });
+               },)
            ],),
          ],
        ),)

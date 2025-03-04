@@ -17,7 +17,7 @@ class SignInScreen extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-        child: Row(mainAxisAlignment: MainAxisAlignment.center,
+        child: Row(spacing: 5,mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Poppins(text: 'Don’t have an account?',fontWeight: FontWeight.w400,fontSize: 16,color: Get.theme.hintColor,),
             InkWell(onTap: (){Get.to(SignupScreen());},child: Poppins(text: 'Sign Up',fontWeight: FontWeight.w400,fontSize: 16,color: Get.theme.primaryColor,)),
