@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:invoice/CustomWidgets/custom_dropdown_field.dart';
 import 'package:invoice/onboardScreen/onboard_screen.dart';
 
 import '../../CustomWidgets/Custom_input_text_field.dart';
@@ -93,7 +94,7 @@ class FormScreen extends StatelessWidget {
                 SizedBox(height: 20,),
 
 
-                Row(spacing: 20,
+                Row(spacing: 20,crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(child: Column(mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -104,7 +105,7 @@ class FormScreen extends StatelessWidget {
                           color: Get.theme.secondaryHeaderColor,
                         ),
                         SizedBox(height: 8),
-                        CustomTextField(hintText: 'Enter Country'),
+                        CustomDropdownField(hintText: 'India',items: ['India','USA','UK'],),
 
                       ],
                     )),
@@ -117,7 +118,7 @@ class FormScreen extends StatelessWidget {
                           color: Get.theme.secondaryHeaderColor,
                         ),
                         SizedBox(height: 8),
-                        CustomTextField(hintText: 'Enter State'),
+                        CustomDropdownField(hintText: 'M.P',items: ['Madhya Pradesh','Punjab','Uttar Pradesh','Chattisgarh'],),
 
                       ],
 
@@ -127,7 +128,7 @@ class FormScreen extends StatelessWidget {
                 SizedBox(height: 20,),
 
 
-                Row(spacing: 20,
+                Row(spacing: 20,mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(child: Column(mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -138,7 +139,8 @@ class FormScreen extends StatelessWidget {
                           color: Get.theme.secondaryHeaderColor,
                         ),
                         SizedBox(height: 8),
-                        CustomTextField(hintText: 'Enter City'),
+                        CustomDropdownField(hintText: 'Indore',items: ['Indore','Bhopal','Jabalpur',],),
+
 
                       ],
                     )),
